@@ -1,0 +1,37 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button-style($background, $color: $white-color) {
+  background: $background;
+  color: $color;
+  border: none;
+  border-radius: $border-radius;
+  padding: $spacing-small $spacing-medium;
+  cursor: pointer;
+  transition: all $transition-speed ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}

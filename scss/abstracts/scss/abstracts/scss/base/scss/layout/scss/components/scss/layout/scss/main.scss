@@ -1,0 +1,8 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+@use "base/global";
+@use "layout/header";
+@use "components/products";
+@use "components/statistics";
+@use "layout/footer";

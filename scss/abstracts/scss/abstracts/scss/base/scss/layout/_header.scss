@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-weight: bold;
+  }
+
+  .navigation {
+    display: flex;
+    gap: $spacing-medium;
+
+    a {
+      color: $text-color;
+      transition: color $transition-speed ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,30 @@
+.footer {
+  background: $secondary-color;
+  color: $text-color;
+  padding: $spacing-large 0;
+
+  .footer-content {
+    @include flex-between;
+    gap: $spacing-medium;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: $spacing-medium;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

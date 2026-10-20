@@ -1,0 +1,39 @@
+.products {
+  padding: $spacing-large 0;
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: $spacing-medium;
+  }
+
+  .product-card {
+    padding: $spacing-medium;
+    border-radius: $border-radius;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .product-title {
+      color: $text-color;
+    }
+
+    .product-button {
+      @include button-style($primary-color);
+    }
+  }
+
+  @include responsive(tablet) {
+    .product-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @include responsive(mobile) {
+    .product-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
